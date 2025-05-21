@@ -1,4 +1,6 @@
-# review paper about AI everyday
+# Daily AI Papers
+
+Reviewing papers related to AI/ML.
 
 ## 📊 분야별 리뷰 비율
 <!-- stats-start -->
