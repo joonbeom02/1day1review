@@ -21,10 +21,12 @@ for issue in issues:
         label_counts[lbl.name] = label_counts.get(lbl.name, 0) + 1
 
 # 3) 비율 텍스트 생성
-stats_md = "\n".join(
-    f"- **{lbl}**: {count}건 ({count/total*100:.1f}%)"
-    for lbl, count in sorted(label_counts.items(), key=lambda x:-x[1])
-)
+stats_md = "No reviews yet."
+if total > 0:
+    stats_md = "\n".join(
+        f"- **{lbl}**: {count}건 ({count/total*100:.1f}%)"
+        for lbl, count in sorted(label_counts.items(), key=lambda x:-x[1])
+    )
 
 # 4) 제목 리스트 생성
 titles_md = "\n".join(f"- {issue.title}" 
