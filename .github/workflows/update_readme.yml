@@ -1,18 +1,21 @@
 name: Update README
 
 on:
-  # 매일 정기 업데이트도 그대로 유지하려면 이 줄을 남기세요
   schedule:
     - cron: '0 0 * * *'
-  # 이슈 이벤트에 반응
   issues:
-    types: [opened, edited, labeled, unlabeled, reopened]
+    types: [opened, edited, labeled, unlabeled, reopened, closed]
 
 jobs:
   update:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # README 파일 수정 권한
+      issues: read     # 이슈 읽기 권한
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
