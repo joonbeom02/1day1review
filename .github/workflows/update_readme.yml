@@ -4,8 +4,6 @@ on:
   # 매일 정기 업데이트도 그대로 유지하려면 이 줄을 남기세요
   schedule:
     - cron: '0 0 * * *'
-  # 수동 실행
-  workflow_dispatch:
   # 이슈 이벤트에 반응
   issues:
     types: [opened, edited, labeled, unlabeled, reopened]
@@ -24,9 +22,4 @@ jobs:
       - name: Update README
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        # (선택) review 라벨이 붙은 이슈만 처리하려면 스크립트 내에서 필터링하거나,
-        # 다음과 같이 조건(if)을 추가할 수도 있습니다.
-        if: |
-          github.event_name != 'issues' ||
-          contains(fromJson(toJson(github.event.issue.labels))[*].name, 'review')
         run: python scripts/update_readme.py
