@@ -6,6 +6,7 @@ Reviewing papers related to AI/ML.
 <!-- stats-start -->
 - **convolution**: 1건 (50.0%)
 - **mesh**: 1건 (50.0%)
+- **NVIDIA**: 1건 (50.0%)
 - **GNN**: 1건 (50.0%)
 <!-- stats-end -->
 
