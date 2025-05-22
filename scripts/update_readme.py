@@ -13,9 +13,6 @@ issues = repo.get_issues(state="all")
 label_counts = {}
 total = 0
 for issue in issues:
-    # 'review' 라벨이 붙은 이슈만 대상으로 할 수도 있음
-    if "review" not in [l.name for l in issue.labels]:
-        continue
     total += 1
     for lbl in issue.labels:
         label_counts[lbl.name] = label_counts.get(lbl.name, 0) + 1
