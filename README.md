@@ -4,6 +4,7 @@ Reviewing papers related to AI/ML.
 
 ## 📊 분야별 리뷰 비율
 <!-- stats-start -->
+- **SSL**: 1건 (25.0%)
 - **mamba**: 1건 (25.0%)
 - **convolution**: 1건 (25.0%)
 - **mesh**: 1건 (25.0%)
