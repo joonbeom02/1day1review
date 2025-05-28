@@ -7,8 +7,8 @@ https://rogue-savory-afe.notion.site/AI-Paper-Reviews-12df16fa6f9b80fea841d19de3
 
 ## 📊 분야별 리뷰 비율
 <!-- stats-start -->
+- **SSL**: 2건 (40.0%)
 - **Meta**: 1건 (20.0%)
-- **SSL**: 1건 (20.0%)
 - **mamba**: 1건 (20.0%)
 - **convolution**: 1건 (20.0%)
 - **mesh**: 1건 (20.0%)
